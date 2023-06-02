@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
 :root{
     --text-font: 'Barlow', sans-serif;
     --title-font: 'Fraunces', serif;
@@ -157,7 +166,7 @@ header h1{
 }
 
 .client{
-    display: flex;
+    display: grid;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -176,8 +185,16 @@ header h1{
     background-size: cover;
 }
 
-.client__avatar:nth-child(1){
+.client__avatar.client1{
     background-image: url(./images/image-emily.jpg);
+}
+
+.client__avatar.client2{
+    background-image: url(./images/image-thomas.jpg);
+}
+
+.client__avatar.client3{
+    background-image: url(./images/image-jennie.jpg);
 }
 
 .client__text{
@@ -198,4 +215,41 @@ header h1{
     color: var(--gray);
     font-weight: 600;
     padding: 12px;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.images img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    background-color: #90d4c5;
+    color: var(--footer);
+}
+
+footer h2{
+    font-size: 2.2rem;
+    font-size: 900;
+}
+
+footer nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    font-weight: 600;
+}
+
+footer>ul{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
 }
